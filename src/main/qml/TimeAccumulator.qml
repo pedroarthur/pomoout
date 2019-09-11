@@ -49,6 +49,10 @@ Item {
         return true
     }
 
+    function next() {
+      forward(remaining)
+    }
+
     function backward(step) {
         elapsed -= step
         coordinated.backward(step)

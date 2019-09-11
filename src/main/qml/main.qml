@@ -371,6 +371,13 @@ Window {
       }
 
       Button {
+        text: "Next"
+        onClicked: {
+          currentStateTime.next()
+        }
+      }
+
+      Button {
         text: clockSource.running ? "Pause" : "Continue"
         onClicked: clockSource.pauseContinue()
         enabled: totalTime.overflows === 0
