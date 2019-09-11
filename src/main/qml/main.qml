@@ -188,7 +188,7 @@ Window {
       property int focusesBeforeLongBreak: focusesBeforeLongBreakSpinBox.value
       property int totalTime: timeLimit * focusesBeforeLongBreak
 
-      property string label: "Focuses"
+      property string label: "Focussing"
     }
 
     Item {
