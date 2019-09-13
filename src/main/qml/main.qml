@@ -410,7 +410,7 @@ Window {
         switch (stateMachine.currentState) {
             case atShortBreak:
             case atLongBreak:
-                return true;
+                return clockSource.active;
             default:
                 return false;
         }
