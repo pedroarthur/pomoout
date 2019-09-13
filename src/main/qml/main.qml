@@ -399,7 +399,7 @@ Window {
   }
 
   Window {
-    id: splash
+    id: breakSplash
 
     title: "Stop! Wait a minute..."
     color: "black"
@@ -437,7 +437,7 @@ Window {
 
     MouseArea {
       anchors.fill: parent
-      onClicked: splash.hide()
+      onClicked: breakSplash.hide()
     }
   }
 }
