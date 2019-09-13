@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="main.qml">../../../src/main/qml/main.qml</file>
+        <file alias="TimeAccumulator.qml">../../../src/main/qml/TimeAccumulator.qml</file>
+        <file alias="TimeLabel.qml">../../../src/main/qml/TimeLabel.qml</file>
+        <file alias="TimeProgressBar.qml">../../../src/main/qml/TimeProgressBar.qml</file>
+    </qresource>
+</RCC>
