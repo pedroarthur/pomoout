@@ -399,6 +399,56 @@ Window {
   }
 
   Window {
+    id: focussingSplash
+
+    title: "You gotta work!"
+    color: "#41cd52"
+
+    flags: Qt.Popup
+
+    visible:
+        switch (stateMachine.currentState) {
+            case focussing:
+                return clockSource.active && (totalTime.overflows === 0);
+            default:
+                return false;
+        }
+
+    width: Screen.width
+    height: 100
+
+    x: 0
+    y: Screen.height/2
+
+    ColumnLayout {
+      anchors.centerIn: parent
+
+      Label {
+        text: stateMachine.currentState.label
+        color: "black"
+      }
+
+      TimeProgressBar {
+        acc: currentStateTime
+        color: "black"
+      }
+    }
+
+    MouseArea {
+      anchors.fill: parent
+      onClicked: focussingSplash.hide()
+    }
+
+    Timer {
+      interval: 5000
+      repeat: false
+
+      running: focussingSplash.visible
+      onTriggered: focussingSplash.hide()
+    }
+  }
+
+  Window {
     id: breakSplash
 
     title: "Stop! Wait a minute..."
